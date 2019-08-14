@@ -159,11 +159,11 @@ This project would not be possible without the effort of many people and project
 
 [circleci-image]: https://img.shields.io/circleci/project/github/slok/grafterm/master.svg
 [circleci-url]: https://circleci.com/gh/slok/grafterm
-[go-reportcard-image]: https://goreportcard.com/badge/github.com/slok/grafterm
-[go-reportcard-url]: https://goreportcard.com/report/github.com/slok/grafterm
+[go-reportcard-image]: https://goreportcard.com/badge/github.com/waynz0r/grafterm
+[go-reportcard-url]: https://goreportcard.com/report/github.com/waynz0r/grafterm
 [grafana]: https://grafana.com/
 [termdash]: https://github.com/mum4k/termdash
-[releases]: https://github.com/slok/grafterm/releases
+[releases]: https://github.com/waynz0r/grafterm/releases
 [cfg-md]: /docs/cfg.md
 [dashboard-examples]: /dashboard-examples
 [iso 8601]: https://en.wikipedia.org/wiki/ISO_8601

@@ -47,6 +47,6 @@
 - Main term application.
 - Fake metrics gatherer.
 
-[unreleased]: https://github.com/slok/grafterm/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/slok/grafterm/compare/v0.1.0...0.2.0
-[0.1.0]: https://github.com/slok/grafterm/releases/tag/v0.1.0
+[unreleased]: https://github.com/waynz0r/grafterm/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/waynz0r/grafterm/compare/v0.1.0...0.2.0
+[0.1.0]: https://github.com/waynz0r/grafterm/releases/tag/v0.1.0

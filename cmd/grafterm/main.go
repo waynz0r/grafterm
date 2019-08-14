@@ -10,17 +10,17 @@ import (
 
 	"github.com/oklog/run"
 
-	"github.com/slok/grafterm/internal/controller"
-	"github.com/slok/grafterm/internal/model"
-	"github.com/slok/grafterm/internal/service/configuration"
-	"github.com/slok/grafterm/internal/service/log"
-	"github.com/slok/grafterm/internal/service/metric"
-	metricdatasource "github.com/slok/grafterm/internal/service/metric/datasource"
-	metricmiddleware "github.com/slok/grafterm/internal/service/metric/middleware"
-	"github.com/slok/grafterm/internal/view"
-	"github.com/slok/grafterm/internal/view/page"
-	"github.com/slok/grafterm/internal/view/render"
-	"github.com/slok/grafterm/internal/view/render/termdash"
+	"github.com/waynz0r/grafterm/pkg/controller"
+	"github.com/waynz0r/grafterm/pkg/model"
+	"github.com/waynz0r/grafterm/pkg/service/configuration"
+	"github.com/waynz0r/grafterm/pkg/service/log"
+	"github.com/waynz0r/grafterm/pkg/service/metric"
+	metricdatasource "github.com/waynz0r/grafterm/pkg/service/metric/datasource"
+	metricmiddleware "github.com/waynz0r/grafterm/pkg/service/metric/middleware"
+	"github.com/waynz0r/grafterm/pkg/view"
+	"github.com/waynz0r/grafterm/pkg/view/page"
+	"github.com/waynz0r/grafterm/pkg/view/render"
+	"github.com/waynz0r/grafterm/pkg/view/render/termdash"
 )
 
 // Main is the main application.

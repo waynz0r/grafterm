@@ -1,9 +1,11 @@
-module github.com/slok/grafterm
+module github.com/waynz0r/grafterm
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.3.3 // indirect
 	github.com/JensRantil/graphite-client v0.0.0-20151206234601-d93bf4b72f5a
 	github.com/alecthomas/kingpin v2.2.6+incompatible
+	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
+	github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/lucasb-eyer/go-colorful v1.0.1
 	github.com/mattn/go-runewidth v0.0.4 // indirect
