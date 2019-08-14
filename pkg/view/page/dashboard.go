@@ -55,6 +55,8 @@ func NewDashboard(ctx context.Context, cfg DashboardCfg, logger log.Logger) (syn
 		logger:     logger,
 	}
 
+	cfg.Renderer.SetTemplater(vs, cfg.AppOverrideVariables)
+
 	// Call the View to load the dashboard and return us the widgets that we will need to call.
 	renderWidgets, err := cfg.Renderer.LoadDashboard(ctx, gr)
 	if err != nil {

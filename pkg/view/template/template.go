@@ -5,6 +5,11 @@ import (
 	"text/template"
 )
 
+const (
+	leftDelimeter  = "<<"
+	rightDelimeter = ">>"
+)
+
 // Data is the object stores the data to be templated in queries, labels, widgets,
 // titles...
 type Data map[string]interface{}
@@ -38,7 +43,7 @@ func (d Data) Render(tpl string) string {
 		d = map[string]interface{}{}
 	}
 
-	tmpl, err := template.New("").Parse(tpl)
+	tmpl, err := template.New("").Delims(leftDelimeter, rightDelimeter).Parse(tpl)
 	if err != nil {
 		return ""
 	}

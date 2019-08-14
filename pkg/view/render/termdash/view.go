@@ -15,6 +15,8 @@ import (
 	"github.com/waynz0r/grafterm/pkg/service/log"
 	graftermgrid "github.com/waynz0r/grafterm/pkg/view/grid"
 	"github.com/waynz0r/grafterm/pkg/view/render"
+	"github.com/waynz0r/grafterm/pkg/view/template"
+	"github.com/waynz0r/grafterm/pkg/view/variable"
 )
 
 const (
@@ -36,6 +38,8 @@ type termDashboard struct {
 	logger  log.Logger
 	cancel  func()
 
+	templater template.Data
+
 	// Term fields.
 	terminal *termbox.Terminal
 }
@@ -54,6 +58,22 @@ func NewTermDashboard(cancel func(), logger log.Logger) (render.Renderer, error)
 		terminal: t,
 		logger:   logger,
 	}, nil
+}
+
+func (t *termDashboard) SetTemplater(variables map[string]variable.Variabler, override map[string]string) {
+	data := map[string]interface{}{}
+
+	// initial values
+	for vid, v := range variables {
+		data[vid] = v.GetValue()
+	}
+
+	// overrides
+	for vid, v := range override {
+		data[vid] = v
+	}
+
+	t.templater = template.Data{}.WithData(data)
 }
 
 func (t *termDashboard) Close() {
@@ -169,6 +189,10 @@ func (t *termDashboard) gridLayout(gr *graftermgrid.Grid) ([]container.Option, e
 func (t *termDashboard) newWidget(widgetcfg model.Widget) (render.Widget, error) {
 	var widget render.Widget
 	var err error
+
+	if t.templater != nil {
+		widgetcfg.Title = t.templater.Render(widgetcfg.Title)
+	}
 
 	switch {
 	case widgetcfg.Gauge != nil:

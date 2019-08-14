@@ -5,12 +5,14 @@ import (
 
 	"github.com/waynz0r/grafterm/pkg/model"
 	"github.com/waynz0r/grafterm/pkg/view/grid"
+	"github.com/waynz0r/grafterm/pkg/view/variable"
 )
 
 // Renderer is the interface that knows how to load a dashboard to be rendered
 // in some target of UI.
 type Renderer interface {
 	LoadDashboard(ctx context.Context, grid *grid.Grid) ([]Widget, error)
+	SetTemplater(vs map[string]variable.Variabler, override map[string]string)
 	Close()
 }
 
